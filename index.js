@@ -95,12 +95,14 @@ app.post('/api/quote', async (req, res) => {
 
 app.use('/admin',movie_theatre_Router);
 
-// app.use('/',(req,res,next)=>{
-//     res.send('Welcome')
-//     console.log('middleware')
-//     next();
-// })
+app.use('/',(req,res,next)=>{
+    res.send('Welcome')
+    console.log('middleware')
 
-app.listen(3000, () => {
+    next();
+})
+
+const port = process.env.PORT || 3001
+app.listen(port, () => {
 	console.log('Server started on 3000')
 })
