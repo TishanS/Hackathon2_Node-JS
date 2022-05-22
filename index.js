@@ -70,7 +70,7 @@ app.use('/',(req,res,next)=>{
     next();
 })
 
-const port = process.env.PORT || 3000
-app.listen(port, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, function {
 	console.log('Server started on 3000')
-})
+});
